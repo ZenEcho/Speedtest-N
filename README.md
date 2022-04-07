@@ -18,12 +18,13 @@ SAME_IP_MULTI_LOGS = false：是否允许同一IP记录多条测速结果
 yum install httpd php git -y
 git clone https://github.com/youheiss/Speedtest-N.git
 cd Speedtest-N/
-cp -R backend/ index.html *.js /var/www/html/
+cp -R backend/ chartjs/ *.html *.js /var/www/html/
 cd /var/www/html/
 chown -R apache *
-systemctl start httpd #重启httpd服务
+systemctl start httpd  #重启httpd服务
 ```
-
+**其他**
+正常部署是没有任何问题的，如果出错了就是你的问题
 
 # 感谢
 
