@@ -26,7 +26,7 @@ systemctl start httpd  #重启httpd服务
 **其他**
 正常部署是没有任何问题的，如果出错了就是你的问题
 
-# 感谢
+# 抄袭的库
 
 https://github.com/librespeed/speedtest
 
