@@ -17,6 +17,7 @@ IP_SERVICE = 'ip.sb'：使用的 IP 运营商解析服务(ip.sb 或 ipinfo.io)
 SAME_IP_MULTI_LOGS = false：是否允许同一IP记录多条测速结果
 ```
 **非面板部署：**
+```bash
 	yum install httpd php git -y
 	git clone https://github.com/youheiss/Speedtest-N.git
 	cd Speedtest-N/
@@ -24,7 +25,7 @@ SAME_IP_MULTI_LOGS = false：是否允许同一IP记录多条测速结果
 	cd /var/www/html/
 	mv index.html
 	chown -R apache *
-systemctl start httpd![image](https://user-images.githubusercontent.com/56901101/162248701-55900cab-aacb-40bc-a60f-fb340ea06116.png)
+```
 
 
 # 感谢
