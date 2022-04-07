@@ -20,8 +20,8 @@ git clone https://github.com/youheiss/Speedtest-N.git
 cd Speedtest-N/
 cp -R backend/ index.html *.js /var/www/html/
 cd /var/www/html/
-mv index.html
 chown -R apache *
+systemctl start httpd #重启httpd服务
 ```
 
 
