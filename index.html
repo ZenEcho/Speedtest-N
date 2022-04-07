@@ -295,6 +295,18 @@ function I(id){return document.getElementById(id);}
     <div id="progressBar"><div id="progress"></div></div>
 	<div class="testGroup">
 		<div class="testArea">
+			<div class="testName">平均延迟</div>
+			<div id="pingText" class="meterText"></div>
+			<div class="unit">ms</div>
+		</div>
+		<div class="testArea">
+			<div class="testName">抖动延迟</div>
+			<div id="jitText" class="meterText"></div>
+			<div class="unit">ms</div>
+		</div>
+	</div>
+	<div class="testGroup">
+		<div class="testArea">
 			<div class="testName">下载速度</div>
             <canvas id="dlMeter" class="meter"></canvas>
 			<div id="dlText" class="meterText"></div>
@@ -307,18 +319,7 @@ function I(id){return document.getElementById(id);}
 			<div class="unit">Mbps</div>
 		</div>
 	</div>
-	<div class="testGroup">
-		<div class="testArea">
-			<div class="testName">延迟</div>
-			<div id="pingText" class="meterText"></div>
-			<div class="unit">ms</div>
-		</div>
-		<div class="testArea">
-			<div class="testName">抖动</div>
-			<div id="jitText" class="meterText"></div>
-			<div class="unit">ms</div>
-		</div>
-	</div>
+
 	<div id="ipArea">
 		IP地址: <span id="ip"></span>
 	</div>
