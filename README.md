@@ -1,6 +1,12 @@
 # Speedtest-N
 
-**基于LibreSpeed和speedtest-x，支持单线程-多线程测速**
+**基于LibreSpeed和speedtest-x**
+
+**本库代码是屎山叠起来的，能跑起来是奇迹**
+
+**支持单线程，多线程**
+
+**支持测速记录查询**
 
 # 使用方法
 
