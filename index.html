@@ -1,16 +1,23 @@
-  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
-<title>speedtest-N</title>
+<title>多线程-speedtest-N</title>
 <link rel="shortcut icon" href="favicon.ico">
 <script type="text/javascript" src="speedtest.js"></script>
 <script type="text/javascript">
 
 //INITIALIZE SPEEDTEST
 var s=new Speedtest(); //create speedtest object
+
+// s.setParameter("time_dl_max","30");
+// s.setParameter("time_ul_max","30");
+// s.setParameter("xhr_dlMultistream","1");
+// s.setParameter("xhr_ulMultistream","1");
+// s.setParameter("xhr_ul_blob_megabytes","50");
+// s.setParameter("garbagePhp_chunkSize","30");
+
 var xhr=new XMLHttpRequest();
 var url_report='./backend/report.php';
 var milestone=0;
@@ -82,6 +89,7 @@ function startStop(){ //start/stop button pressed
 		I("startStopBtn").className="running";
         s.onupdate=function(data){ //callback to update data in UI
             uiData=data;//速度表同步
+            
             I("ip").textContent=data.clientIp;
             I("dlText").textContent=(data.testState==1&&data.dlStatus==0)?"...":data.dlStatus;
             I("ulText").textContent=(data.testState==3&&data.ulStatus==0)?"...":data.ulStatus;
@@ -92,13 +100,16 @@ function startStop(){ //start/stop button pressed
         	var ipIspArr = I("ip").textContent.split(' - ', 3);
         	var ip = ipIspArr[0];
         	var isp = ipIspArr[1];
-        	var addr = ipIspArr[2] === undefined? '' :ipIspArr[2];
+        // 	var addr = ipIspArr[2] === undefined? '' :ipIspArr[2];  城市弃用
         	var progress = Math.floor(100*prog);
         	var key = key_prefix + "_" + ip;
+			var qita="多线程测试"
         	if (progress > 20 && (progress % 10 == 0) && progress != milestone) {
         		console.log(progress);
-        		var params = 'key='+key+'&ip='+ip+'&isp='+isp+'&addr='+addr+'&dspeed='+I("dlText").textContent+'&uspeed='+I("ulText").textContent+'&ping='+I("pingText").textContent
+				
+        		var params = 'key='+key+'&ip='+ip+'&isp='+isp+'&dspeed='+I("dlText").textContent+'&uspeed='+I("ulText").textContent+'&ping='+I("pingText").textContent+"&qita="+qita
         						+'&jitter='+I("jitText").textContent;
+        		console.log(params);
         		xhr.timeout = 3000;
         		xhr.ontimeout = function (e) {
         			console.log('上报超时');
@@ -285,8 +296,9 @@ function I(id){return document.getElementById(id);}
 	}
 </style>
 </head>
+
 <body>
-<h1>Speedtest-N</h1>
+<h1>多线程-speedtest-N</h1>
 <div id="startStopBtn" onclick="startStop()">
     <span class="start-border"></span>
     <span class="start-text"></span>
@@ -324,6 +336,7 @@ function I(id){return document.getElementById(id);}
 		IP地址: <span id="ip"></span>
 	</div>
 </div>
+<p><a href="./one.html" target="_blank">单线程测试</a></p>
 <p><a href="./results.html" target="_blank">查看测速记录</a></p>
 <p><a href="https://github.com/youheiss/Speedtest-N" target="_blank">speedtest-N 项目地址</a></p>
 <script type="text/javascript">
