@@ -18,7 +18,7 @@
 
 2、打开 {域名}/results.html 查看测速记录
 
-3、results.html页面提示接口报错，是因为没有权限。请给予目录755权限
+3、results.html页面提示接口报错，是因为没有权限。请给予目录755权限（宝塔所有者权限是www非root）
 
 ```bash
 Tips：backend/config.php 中可定义一些自定义配置：
