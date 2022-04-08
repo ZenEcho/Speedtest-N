@@ -1,6 +1,6 @@
 # Speedtest-N
 
-**基于LibreSpeed和speedtest-x**
+**基于LibreSpeed和speedtest-x，支持单线程-多线程测速**
 
 # 使用方法
 
@@ -33,7 +33,7 @@ systemctl start httpd  #重启httpd服务
 **其他**
 正常部署是没有任何问题的，如果出错了就是你的问题
 
-# 抄袭的库
+# 参考的库（我抄袭的库）
 
 https://github.com/librespeed/speedtest
 
