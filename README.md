@@ -1,5 +1,7 @@
 # Speedtest-N
 
+**为什么叫Speedtest-N，因为是模仿了Speedtest.Net皮肤**
+
 **基于LibreSpeed和speedtest-x**
 
 **本库是东凑西拼的屎山和bug堆起来的，能跑起来是个奇迹。**
