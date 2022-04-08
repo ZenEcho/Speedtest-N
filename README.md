@@ -3,8 +3,12 @@
 **基于LibreSpeed和speedtest-x**
 
 # 使用方法
+
 **面板部署：**
-下载本仓库并解压到网站目录，访问 {域名}/index.html 进行测速
+
+下载本仓库并解压到网站目录。
+
+1、访问 {域名}/index.html 进行测速
 
 2、打开 {域名}/results.html 查看测速记录
 
