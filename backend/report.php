@@ -25,12 +25,13 @@ $reportData = [
     "key" => sha1(filter_var($_POST['key'], FILTER_SANITIZE_STRING)),
     "ip" => maskLastSegment(filter_var($_POST['ip'], FILTER_SANITIZE_STRING)),
     "isp" => filter_var($_POST['isp'], FILTER_SANITIZE_STRING),
-    "addr" => filter_var($_POST['addr'], FILTER_SANITIZE_STRING),
+    // "addr" => filter_var($_POST['addr'], FILTER_SANITIZE_STRING),
     "dspeed" => (double) filter_var($_POST['dspeed'], FILTER_SANITIZE_STRING),
     "uspeed" => (double) filter_var($_POST['uspeed'], FILTER_SANITIZE_STRING),
     "ping" => (double) filter_var($_POST['ping'], FILTER_SANITIZE_STRING),
     "jitter" => (double) filter_var($_POST['jitter'], FILTER_SANITIZE_STRING),
     "created" => date('Y-m-d H:i:s', time()),
+    "qita" => filter_var($_POST['qita'], FILTER_SANITIZE_STRING),
 ];
 
 if (empty($reportData['ip'])) exit;
