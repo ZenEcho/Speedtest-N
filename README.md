@@ -41,6 +41,9 @@ systemctl start httpd  #重启httpd服务
 **其他**
 
 正常部署是没有任何问题的，如果出错了就是你的问题
+![image](https://user-images.githubusercontent.com/56901101/162375440-20929c2e-9eca-47fb-bcef-30f8a2fed495.png)
+![image](https://user-images.githubusercontent.com/56901101/162375450-c2b8179d-da94-43b9-b12d-d4806de64c1d.png)
+
 
 # 参考的库（我抄袭的库）
 
