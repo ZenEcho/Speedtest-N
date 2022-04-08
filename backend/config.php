@@ -13,4 +13,4 @@ const IP_SERVICE = 'ip.sb';
 /**
  * 是否允许同一IP记录多条测速结果
  */
-const SAME_IP_MULTI_LOGS = false;
+const SAME_IP_MULTI_LOGS = true;
